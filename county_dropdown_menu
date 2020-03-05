@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .force-scroll {
+
+		overflow-y: scroll;
+
+		height: auto;}
+.dropbtn {
+  background-color: #ebffeb;
+  color: #008900;
+  padding: 16px;
+  font-size: 16px;
+  border-style: outset;
+  border-color:blue;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  color: #00b100;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+
+</style>
+</head>
+<body>
+
+
+<div class="dropdown-menu">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content dropdown-primary force-scroll">
+
+
+<a href="#alameda">Alameda</a>
+    <a href="#alpine">Alpine</a>
+    <a href="#amador">Amador</a>
+    <a href="#butte">Butte</a>
+    <a href="#calaveras">Calaveras</a>
+    <a href="#colusa">Colusa</a>
+    <a href="#contracosta">Contra Costa</a>
+    <a href="#butte">Butte</a>
+    <a href="#alameda">Alameda</a>
+    <a href="#alpine">Alpine</a>
+    <a href="#amador">Amador</a>
+    <a href="#butte">Butte</a>
+    <a href="#alameda">Alameda</a>
+    <a href="#alpine">Alpine</a>
+    <a href="#amador">Amador</a>
+    <a href="#butte">Butte</a>
+    <a href="#alameda">Alameda</a>
+    <a href="#alpine">Alpine</a>
+    <a href="#amador">Amador</a>
+    <a href="#butte">Butte</a>
+   
+Butte
+Calaveras
+Colusa
+Contra Costa
+Del Norte
+El Dorado
+Fresno
+Glenn
+Humboldt
+Imperial
+Inyo
+Kern
+Kings
+Lake
+Lassen
+Los Angeles
+Madera
+Marin
+Mariposa
+Mendocino
+Merced
+Modoc
+Mono
+Monterey
+Napa
+Nevada
+Orange
+Placer
+Plumas
+Riverside
+Sacramento
+San Benito
+San Bernardino
+San Diego
+San Francisco
+San Joaquin
+San Luis Obispo
+San Mateo
+Santa Barbara
+Santa Clara
+Santa Cruz
+Shasta
+Sierra
+Siskiyou
+Solano
+Sonoma
+Stanislaus
+Sutter
+Tehama
+Trinity
+Tulare
+Tuolumne
+Ventura
+Yolo
+Yuba
+  </div>
+</div>
+
+<script>
+/* toggle dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close  dropdown if click outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
