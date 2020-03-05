@@ -5,10 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
     .force-scroll {
-
-		overflow-y: scroll;
-
-		height: auto;}
+	overflow-y: scroll;
+	height: auto;
+	}
 .dropbtn {
   background-color: #ffffff;
   color: #008900;
