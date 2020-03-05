@@ -1,10 +1,16 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+    .force-scroll {
+
+		overflow-y: scroll;
+
+		height: auto;}
 .dropbtn {
-  background-color: #ebffeb;
+  background-color: #ffffff;
   color: #008900;
   padding: 16px;
   font-size: 16px;
@@ -14,6 +20,7 @@
 }
 
 .dropbtn:hover, .dropbtn:focus {
+  background-color:#ebffeb;
   color: #00b100;
 }
 
@@ -39,18 +46,21 @@
   display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {background-color: #ebffeb;}
 
 .show {display: block;}
+
+
+
 </style>
 </head>
 <body>
 
 
-<div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+<div class="dropdown-menu">
+  <button onclick="myFunction()" class="dropbtn">County ╲╱</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="#alameda">Alameda</a>
+	<a href="#alameda">Alameda</a>
     <a href="#alpine">Alpine</a>
     <a href="#amador">Amador</a>
     <a href="#butte">Butte</a>
