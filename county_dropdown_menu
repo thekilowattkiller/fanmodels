@@ -1,14 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    .force-scroll {
-
-		overflow-y: scroll;
-
-		height: auto;}
 .dropbtn {
   background-color: #ebffeb;
   color: #008900;
@@ -48,95 +42,73 @@
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
-
-
-
 </style>
 </head>
 <body>
 
 
-<div class="dropdown-menu">
+<div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content dropdown-primary force-scroll">
-
-
-<a href="#alameda">Alameda</a>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#alameda">Alameda</a>
     <a href="#alpine">Alpine</a>
     <a href="#amador">Amador</a>
     <a href="#butte">Butte</a>
     <a href="#calaveras">Calaveras</a>
     <a href="#colusa">Colusa</a>
     <a href="#contracosta">Contra Costa</a>
-    <a href="#butte">Butte</a>
-    <a href="#alameda">Alameda</a>
-    <a href="#alpine">Alpine</a>
-    <a href="#amador">Amador</a>
-    <a href="#butte">Butte</a>
-    <a href="#alameda">Alameda</a>
-    <a href="#alpine">Alpine</a>
-    <a href="#amador">Amador</a>
-    <a href="#butte">Butte</a>
-    <a href="#alameda">Alameda</a>
-    <a href="#alpine">Alpine</a>
-    <a href="#amador">Amador</a>
-    <a href="#butte">Butte</a>
-   
-Butte
-Calaveras
-Colusa
-Contra Costa
-Del Norte
-El Dorado
-Fresno
-Glenn
-Humboldt
-Imperial
-Inyo
-Kern
-Kings
-Lake
-Lassen
-Los Angeles
-Madera
-Marin
-Mariposa
-Mendocino
-Merced
-Modoc
-Mono
-Monterey
-Napa
-Nevada
-Orange
-Placer
-Plumas
-Riverside
-Sacramento
-San Benito
-San Bernardino
-San Diego
-San Francisco
-San Joaquin
-San Luis Obispo
-San Mateo
-Santa Barbara
-Santa Clara
-Santa Cruz
-Shasta
-Sierra
-Siskiyou
-Solano
-Sonoma
-Stanislaus
-Sutter
-Tehama
-Trinity
-Tulare
-Tuolumne
-Ventura
-Yolo
-Yuba
+    <a href="#delnorte">Del Norte</a>
+    <a href="#eldorado">El Dorado</a>
+    <a href="#fresno">Fresno</a>
+    <a href="#glenn">Glenn</a>
+    <a href="#humboldt">Humboldt</a>
+    <a href="#imperial">Imperial</a>
+    <a href="#inyo">Inyo</a>
+    <a href="#kern">Kern</a>
+    <a href="#kings">Kings</a>
+    <a href="#lake">Lake</a>
+    <a href="#lassen">Lassen</a>
+    <a href="#losangeles">Los Angeles</a>
+    <a href="#madera">Madera</a>
+    <a href="#marin">Marin</a>
+    <a href="#mariposa">Mariposa</a>
+    <a href="#mendocino">Mendocino</a>
+    <a href="#merced">Merced</a>
+    <a href="#modoc">Modoc</a>
+    <a href="#mono">Mono</a>
+    <a href="#monterey">Monterey</a>
+    <a href="#napa">Napa</a>
+    <a href="#nevada">Nevada</a>
+    <a href="#orange">Orange</a>
+    <a href="#placer">Placer</a>
+    <a href="#plumas">Plumas</a>
+    <a href="#riverside">Riverside</a>
+    <a href="#sacramento">Sacramento</a>
+    <a href="#sanbenito">San Benito</a>
+    <a href="#sanbernadino">San Bernadino</a>
+    <a href="#sandiego">San Diego</a>
+    <a href="#sanfrancisco">San Francisco</a>
+    <a href="#sanjoaquin">San Joaquin</a>
+    <a href="#sanluisobispo">San Luis Obispo</a>
+    <a href="#sanmateo">San Mateo</a>
+    <a href="#santabarbara">Santa Barbara</a>
+    <a href="#santaclara">Santa Clara</a>
+    <a href="#santacruz">Santa Cruz</a>
+    <a href="#shasta">Shasta</a>
+    <a href="#sierra">Sierra</a>
+    <a href="#siskiyou">Siskiyou</a>
+    <a href="#solano">Solano</a>
+    <a href="#sonoma">Sonoma</a>
+    <a href="#stanislaus">Stanislaus</a>
+    <a href="#sutter">Sutter</a>
+    <a href="#tehama">Tehama</a>
+    <a href="#trinity">Trinity</a>
+    <a href="#tulare">Tulare</a>
+    <a href="#tuolumne">Tuolumne</a>
+    <a href="#ventura">Ventura</a>
+    <a href="#yolo">Yolo</a>
+    <a href="#yuba">Yuba</a>
+    <a href="#channelislands">Channel Islands</a>
   </div>
 </div>
 
