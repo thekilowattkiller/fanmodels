@@ -615,6 +615,26 @@ table, th, td {
   </tr>
   
 </table>
+<script>
+            
+            var table = document.getElementById("table"),rIndex,cIndex;
+            
+            // table rows
+            for(var i = 1; i < table.rows.length; i++)
+            {
+                // row cells
+                for(var j = 0; j < table.rows[i].cells.length; j++)
+                {
+                    table.rows[i].cells[j].onclick = function()
+                    {
+                        rIndex = this.parentElement.rowIndex;
+                        cIndex = this.cellIndex+1;
+                        console.log("Row : "+rIndex+" , Column : "+cIndex);
+                    };
+                }
+            }
+            
+        </script>
 
 </body>
 </html>
