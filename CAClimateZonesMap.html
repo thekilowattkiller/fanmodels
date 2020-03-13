@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <script>
-var countydata = '';
+var zonedata = '';
 function setval(varval)
 {
-	countydata= varval;
-	alert(countydata);
+	zonedata= varval;
+	alert(zonedata);
 }
 
 </script>
-<img id="county" usemap="#image-map"  src="https://thekilowattkiller.github.io/fanmodels/CAClimateZoneMap.png">
+<img id="zone" usemap="#image-map"  src="https://thekilowattkiller.github.io/fanmodels/CAClimateZoneMap.png">
 
     <map name="image-map">
 
@@ -67,10 +67,10 @@ function setval(varval)
         
 
         function setcoords(areaid, totalOfAreas) {
-            document.getElementById('county').style.width = "auto";
-            var width1 = document.getElementById('county').width;
-            document.getElementById('county').style.width = "100%";
-            var width2 = document.getElementById('county').width;
+            document.getElementById('zone').style.width = "auto";
+            var width1 = document.getElementById('zone').width;
+            document.getElementById('zone').style.width = "100%";
+            var width2 = document.getElementById('zone').width;
             var ratio = width2 / width1;
 
             for (var i = 0; i < totalOfAreas; i++) {
@@ -88,11 +88,11 @@ function setval(varval)
 
 
        window.onload = function () {
-            setcoords("county", 20);
+            setcoords("zone", 20);
         };
 
         window.onresize = function () {
-            setcoords("county", 20);
+            setcoords("zone", 20);
         };
     </script>
     </html>
