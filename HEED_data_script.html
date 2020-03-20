@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Copyright (C) 2020 easter.thames</title>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] },
+  TeX: { equationNumbers: { autoNumber: 'all' } }
+});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<style>
+body > * {
+  max-width: 42em;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+}
+pre, code {
+  max-width: 50em;
+  font-family: monospace;
+}
+pre.oct-code {
+  border: 1px solid Grey;
+  padding: 5px;
+}
+pre.oct-code-output {
+  margin-left: 2em;
+}
+span.comment {
+  color: ForestGreen;
+}
+span.keyword {
+  color: Blue;
+}
+span.string {
+  color: DarkOrchid;
+}
+footer {
+  margin-top: 2em;
+  font-size: 80%;
+}
+a, a:visited {
+  color: Blue;
+}
+h2 {
+  font-family: "Roboto Condensed", serif;
+  margin-top: 1.5em;
+}
+h2 a, h2 a:visited {
+  color: Black;
+}
+</style>
+
+</head>
+<body>
+<h1>Copyright (C) 2020 easter.thames</h1>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#node1">Author: easter.thames <a href="easter.thames@DE-PC-04">easter.thames@DE-PC-04</a></a></li>
+<li><a href="#node2">Created: 2020-03-06</a></li>
+</ul>
+<h2><a id="node1">Author: easter.thames <a href="easter.thames@DE-PC-04">easter.thames@DE-PC-04</a></a></h2><h2><a id="node2">Created: 2020-03-06</a></h2>
+<pre class="oct-code"><span class="comment">%From https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator:</span>
+<span class="comment">%1000 kWh = 0.707 metric Tons of CO2 = 0.153 passenger vehicles driven annually</span>
+
+cars = 0.0002 <span class="comment">%unit equivalence of cars per unit energy savings in kWh</span>
+<span class="comment">%energy units in kWh</span>
+<span class="comment">%Model House used issmall 2 BR House (1200 sqft), sloped roof, no attached garage</span>
+<span class="comment">%Typical existing home (not typical new home that meets 2013 Ca Energy Criteria)</span>
+
+heed(1).HVACenergy = 12396; <span class="comment">%energy used in climate zone 1 with no efficient WHF/FOAT/Smart fan</span>
+heed(1).FOATenergy = 11595; <span class="comment">%energy used in climate zone 1 with efficient WHF/FOAT/Smart fan</span>
+heed(1).HVACcost = 1021.82;
+heed(1).FOATcost = 905.86;
+
+<span class="comment">%Same, but for Climate Zone 2</span>
+heed(2).HVACenergy = 12770;
+heed(2).FOATenergy = 12662;
+heed(2).HVACcost = 1023.42;
+heed(2).FOATcost = 1005.05;
+
+<span class="comment">%Climate Zone 3</span>
+heed(3).HVACenergy = 9702;
+heed(3).FOATenergy = 9638;
+heed(3).HVACcost = 763.11;
+heed(3).FOATcost = 753.30;
+
+<span class="comment">%Climate Zone 4</span>
+heed(4).HVACenergy = 10159;
+heed(4).FOATenergy = 9985;
+heed(4).HVACcost = 866.17;
+heed(4).FOATcost = 836.74;
+
+<span class="comment">%Climate Zone 5</span>
+heed(5).HVACenergy = 8708;
+heed(5).FOATenergy = 8643;
+heed(5).HVACcost = 703.50;
+heed(5).FOATcost = 693.40;
+
+<span class="comment">%Climate Zone 6</span>
+heed(6).HVACenergy = 7127;
+heed(6).FOATenergy = 6767;
+heed(6).HVACcost = 696.88;
+heed(6).FOATcost = 636.21;
+
+<span class="comment">%Climate Zone 7</span>
+heed(7).HVACenergy = 7024;
+heed(7).FOATenergy = 6664;
+heed(7).HVACcost = 799.59;
+heed(7).FOATcost = 706.64;
+
+<span class="comment">%Climate Zone 8</span>
+heed(8).HVACenergy = 7911;
+heed(8).FOATenergy = 7612;
+heed(8).HVACcost = 877.14;
+heed(8).FOATcost = 807.55;
+
+<span class="comment">%Climate Zone 9</span>
+heed(9).HVACenergy = 8373;
+heed(9).FOATenergy = 8149;
+heed(9).HVACcost = 1012.44;
+heed(9).FOATcost = 951.26;
+
+<span class="comment">%Climate Zone 10</span>
+heed(10).HVACenergy = 9845;
+heed(10).FOATenergy = 9657;
+heed(10).HVACcost = 1219.98;
+heed(10).FOATcost = 1169.20;
+
+<span class="comment">%Climate Zone 11</span>
+heed(11).HVACenergy = 13947;
+heed(11).FOATenergy = 13808;
+heed(11).HVACcost = 1327.50;
+heed(11).FOATcost = 1297.41;
+
+<span class="comment">%Climate Zone 12</span>
+heed(12).HVACenergy = 12987;
+heed(12).FOATenergy = 12821;
+heed(12).HVACcost = 1142.05;
+heed(12).FOATcost = 1110.19;
+
+<span class="comment">%Climate Zone 13</span>
+heed(13).HVACenergy = 13009;
+heed(13).FOATenergy = 12878;
+heed(13).HVACcost = 1423.63;
+heed(13).FOATcost = 1392.22;
+
+<span class="comment">%Climate Zone 14</span>
+heed(14).HVACenergy = 14519;
+heed(14).FOATenergy = 14387;
+heed(14).HVACcost = 1455.10;
+heed(14).FOATcost = 1419.86;
+
+<span class="comment">%Climate Zone 15</span>
+heed(15).HVACenergy = 12871;
+heed(15).FOATenergy = 12637;
+heed(15).HVACcost = 1899.32;
+heed(15).FOATcost = 1837.01;
+
+<span class="comment">%Climate Zone 16</span>
+heed(16).HVACenergy = 19576;
+heed(16).FOATenergy = 19454;
+heed(16).HVACcost = 1744.46;
+heed(16).FOATcost = 1639.36;
+
+<span class="keyword">for</span> i = 1:length(heed)
+heed(i).EnergyReduc = (heed(i).HVACenergy) - (heed(i).FOATenergy);
+heed(i).FOATsavings = (heed(i).HVACcost) - (heed(i).FOATcost);
+heed(i).CarEquivalence = (heed(i).EnergyReduc)*cars;
+heed(i).metricTonCO2_HVAC = (heed(i).HVACenergy)*0.000707;
+heed(i).metricTonCO2_FOAT = (heed(i).FOATenergy)*0.000707;
+<span class="keyword">endfor</span></pre>
+
+<pre class="oct-code-output">cars =  0.00020000
+</pre>
+
+<footer>
+<hr>
+<a href="https://www.octave.org">Published with GNU Octave 4.4.1</a>
+</footer>
+<!--
+##### SOURCE BEGIN #####
+## Copyright (C) 2020 easter.thames
+## Author: easter.thames <easter.thames@DE-PC-04>
+## Created: 2020-03-06
+
+
+%From https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator:
+%1000 kWh = 0.707 metric Tons of CO2 = 0.153 passenger vehicles driven annually
+
+cars = 0.0002 %unit equivalence of cars per unit energy savings in kWh
+%energy units in kWh
+%Model House used issmall 2 BR House (1200 sqft), sloped roof, no attached garage
+%Typical existing home (not typical new home that meets 2013 Ca Energy Criteria)
+
+heed(1).HVACenergy = 12396; %energy used in climate zone 1 with no efficient WHF/FOAT/Smart fan
+heed(1).FOATenergy = 11595; %energy used in climate zone 1 with efficient WHF/FOAT/Smart fan
+heed(1).HVACcost = 1021.82;
+heed(1).FOATcost = 905.86;
+
+%Same, but for Climate Zone 2
+heed(2).HVACenergy = 12770;
+heed(2).FOATenergy = 12662;
+heed(2).HVACcost = 1023.42;
+heed(2).FOATcost = 1005.05;
+
+%Climate Zone 3
+heed(3).HVACenergy = 9702;
+heed(3).FOATenergy = 9638;
+heed(3).HVACcost = 763.11;
+heed(3).FOATcost = 753.30;
+
+%Climate Zone 4
+heed(4).HVACenergy = 10159;
+heed(4).FOATenergy = 9985;
+heed(4).HVACcost = 866.17;
+heed(4).FOATcost = 836.74;
+
+%Climate Zone 5
+heed(5).HVACenergy = 8708;
+heed(5).FOATenergy = 8643;
+heed(5).HVACcost = 703.50;
+heed(5).FOATcost = 693.40;
+
+%Climate Zone 6
+heed(6).HVACenergy = 7127;
+heed(6).FOATenergy = 6767;
+heed(6).HVACcost = 696.88;
+heed(6).FOATcost = 636.21;
+
+%Climate Zone 7
+heed(7).HVACenergy = 7024;
+heed(7).FOATenergy = 6664;
+heed(7).HVACcost = 799.59;
+heed(7).FOATcost = 706.64;
+
+%Climate Zone 8
+heed(8).HVACenergy = 7911;
+heed(8).FOATenergy = 7612;
+heed(8).HVACcost = 877.14;
+heed(8).FOATcost = 807.55;
+
+%Climate Zone 9
+heed(9).HVACenergy = 8373;
+heed(9).FOATenergy = 8149;
+heed(9).HVACcost = 1012.44;
+heed(9).FOATcost = 951.26;
+
+%Climate Zone 10
+heed(10).HVACenergy = 9845;
+heed(10).FOATenergy = 9657;
+heed(10).HVACcost = 1219.98;
+heed(10).FOATcost = 1169.20;
+
+%Climate Zone 11
+heed(11).HVACenergy = 13947;
+heed(11).FOATenergy = 13808;
+heed(11).HVACcost = 1327.50;
+heed(11).FOATcost = 1297.41;
+
+%Climate Zone 12
+heed(12).HVACenergy = 12987;
+heed(12).FOATenergy = 12821;
+heed(12).HVACcost = 1142.05;
+heed(12).FOATcost = 1110.19;
+
+%Climate Zone 13
+heed(13).HVACenergy = 13009;
+heed(13).FOATenergy = 12878;
+heed(13).HVACcost = 1423.63;
+heed(13).FOATcost = 1392.22;
+
+%Climate Zone 14
+heed(14).HVACenergy = 14519;
+heed(14).FOATenergy = 14387;
+heed(14).HVACcost = 1455.10;
+heed(14).FOATcost = 1419.86;
+
+%Climate Zone 15
+heed(15).HVACenergy = 12871;
+heed(15).FOATenergy = 12637;
+heed(15).HVACcost = 1899.32;
+heed(15).FOATcost = 1837.01;
+
+%Climate Zone 16
+heed(16).HVACenergy = 19576;
+heed(16).FOATenergy = 19454;
+heed(16).HVACcost = 1744.46;
+heed(16).FOATcost = 1639.36;
+
+for i = 1:length(heed)
+heed(i).EnergyReduc = (heed(i).HVACenergy) - (heed(i).FOATenergy);
+heed(i).FOATsavings = (heed(i).HVACcost) - (heed(i).FOATcost);
+heed(i).CarEquivalence = (heed(i).EnergyReduc)*cars;
+heed(i).metricTonCO2_HVAC = (heed(i).HVACenergy)*0.000707;
+heed(i).metricTonCO2_FOAT = (heed(i).FOATenergy)*0.000707;
+endfor
+
+##### SOURCE END #####
+-->
+</body>
+</html>
