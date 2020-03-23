@@ -89,15 +89,46 @@
         
 
     </script>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+}
+</style>
 
-<p id="TYPICALenergy">Energy used by Typical House</p>
-<p id="TYPICALghg">GHG Emissions by Typical House</p>
-<p id="TYPICALcost">Cost of Typical House HVAC</p>
-<p id="FOATenergy">Energy used with WHF</p>
-<p id="FOATghg">GHG Emissions with WHF</p>
-<p id="FOATcost">Cost of HVAAC with WHF</p>
-<p id="Save">Savings</p>
+<table>
+  <tr>
+    <th>Home Method</th>
+    <th>Equivalent GHG Reduction</th>
+    <th>Cost</th>
+  </tr>
+  <tr>
+    <td>AC and Heating</td>
+    <td id="TYPICALenergy">Energy used by Typical House</td>
+    <td id="TYPICALghg">GHG Emissions by Typical House/HVACghg</td>
+    <td id="TYPICALcost">Cost of Typical House HVAC/HVACcost</td>
+  </tr>
+  <tr>
+    <td>Favorable Outside Air Temperature</td>
+    <td id="FOATenergy">Energy used with WHF</td>
+    <td id="FOATghg">GHG Emissions with WHF/WHFghg</td>
+    <td id="FOATcost">Cost of HVAAC with WHF/WHFcost</td>
+  </tr>
+  <tr>
+    <td>Annual Savings with Smart Fan</td>
+    <td>GHGsavings</td>
+    <td id="Save">Costsavings</td>
+  </tr>
+
+</table>
+
 
 <script>
 var heed = [
