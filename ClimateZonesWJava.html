@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<button id="zone0">ONE</button>
+<button id="zone1">TWO</button>
+<button id="zone2">THREE</button>
+
+
+<p id="TYPICALenergy">Insert1</p>
+<p id="TYPICALghg">Insert1</p>
+<p id="TYPICALcost">Insert1</p>
+<p id="FOATenergy">Insert1</p>
+<p id="FOATghg">Insert1</p>
+<p id="FOATcost">Insert1</p>
+<p id="Save">Insert1</p>
+
+<script>
+var p1 = '';
+
+document.getElementById("zone0").addEventListener("click", function() {
+  myFunction(1);
+});
+document.getElementById("zone1").addEventListener("click", function() {
+  myFunction(2);
+});
+document.getElementById("zone2").addEventListener("click", function() {
+  myFunction(3);
+});
+
+function myFunction(a) {
+  var kWhrTYP = kWhrTYPICAL(a);
+  	document.getElementById("TYPICALenergy").innerHTML = kWrTYP;
+  var ghgEquivalenceTYP = ghgEquivalenceTYPICAL(a)
+  	document.getElementById("TYPICALghg").innerHTML = ghgEquivalenceTYP;
+  var costTYP = costTYPICAL(a);
+  	document.getElementById("TYPICALcost").innerHTML = costTYP;
+  var kWhrFO = kWhrFOAT(a);
+  	document.getElementById("FOATenergy").innerHTML = kWrFO;
+  var ghgEquivalenceFO = ghgEquivalenceFOAT(a);
+  	document.getElementById("FOATghg").innerHTML = ghgEquivalentFO;
+  var costFO = costFOAT(a)
+  	document.getElementById("FOATcost").innerHTML = costFO;
+  var sav = savings(a)
+  	document.getElementById("Save").innerHTML = sav;
+    
+    
+  climate":"one",
+"kWhrTYPICAL":"12,396",
+"ghgEquivalenceTYPICAL":"8.76", 
+"costTYPICAL":"$1,021.82",
+"kWhrFOAT":"11,595",
+"ghgEquivalenceFOAT":"8.19",
+"costFOAT":"905.86",
+"savings":"$115.96
+}
+</script>
+
+</body>
+</html>
