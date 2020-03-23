@@ -80,11 +80,11 @@
 
 
        window.onload = function () {
-            setcoords("zone", 21);
+            setcoords("zone", 20);
         };
 
         window.onresize = function () {
-            setcoords("zone", 21);
+            setcoords("zone", 20);
         };
         
 
@@ -110,7 +110,7 @@ var heed = [
 "ghgEquivalenceFOAT":"8.19",
 "costFOAT":"905.86",
 "savings":"$115.96"
-}
+},
 {
 "climate":"two",
 "kWhrTYPICAL":"12,770",
@@ -120,7 +120,7 @@ var heed = [
 "ghgEquivalenceFOAT":"8.95",
 "costFOAT":"$1,005.05",
 "savings":"$18.37"
-}
+},
 {
 "climate":"three",
 "kWhrTYPICAL":"9,702",
@@ -130,7 +130,7 @@ var heed = [
 "ghgEquivalenceFOAT":"6.81",
 "costFOAT":"$753.30",
 "savings":"$9.81"
-}
+},
 {
 "climate":"four",
 "kWhrTYPICAL":"10,159",
@@ -140,7 +140,7 @@ var heed = [
 "ghgEquivalenceFOAT":"7.06",
 "costFOAT":"$836.74",
 "savings":"$29.43"
-}
+},
 {
 "climate":"five",
 "kWhrTYPICAL":"8,708",
@@ -150,7 +150,7 @@ var heed = [
 "ghgEquivalenceFOAT":"6.11",
 "costFOAT":"$693.40",
 "savings":"$10.10"
-}
+},
 {
 "climate":"six",
 "kWhrTYPICAL":"7,127",
@@ -160,7 +160,7 @@ var heed = [
 "ghgEquivalenceFOAT":"4.78",
 "costFOAT":"$636.21",
 "savings":"$60.67"
-}
+},
 {
 "climate":"seven",
 "kWhrTYPICAL":"7,024",
@@ -170,7 +170,7 @@ var heed = [
 "ghgEquivalenceFOAT":"4.71",
 "costFOAT":"$706.64",
 "savings":"$92.95"
-}
+},
 {
 "climate":"eight",
 "kWhrTYPICAL":"7,911",
@@ -180,7 +180,7 @@ var heed = [
 "ghgEquivalenceFOAT":"5.38",
 "costFOAT":"$807.55",
 "savings":"$69.59"
-}
+},
 {
 "climate":"nine",
 "kWhrTYPICAL":"8,373",
@@ -190,7 +190,7 @@ var heed = [
 "ghgEquivalenceFOAT":"5.76",
 "costFOAT":"$951.26",
 "savings":"$61.18"
-}
+},
 {
 "climate":"ten",
 "kWhrTYPICAL":"9,845",
@@ -200,7 +200,7 @@ var heed = [
 "ghgEquivalenceFOAT":"6.82",
 "costFOAT":"$1,169.20",
 "savings":"$50.78"
-}
+},
 {
 "climate":"eleven",
 "kWhrTYPICAL":"13,947",
@@ -210,7 +210,7 @@ var heed = [
 "ghgEquivalenceFOAT":"9.76",
 "costFOAT":"$1,297.41",
 "savings":"$30.09"
-}
+},
 {
 "climate":"twelve",
 "kWhrTYPICAL":"12,987",
@@ -220,7 +220,7 @@ var heed = [
 "ghgEquivalenceFOAT":"9.06",
 "costFOAT":"$1,110.19",
 "savings":"$31.86"
-}
+},
 {
 "climate":"thirteen",
 "kWhrTYPICAL":"13,009",
@@ -230,7 +230,7 @@ var heed = [
 "ghgEquivalenceFOAT":"9.10",
 "costFOAT":"$1,392.22",
 "savings":"$31.41"
-}
+},
 {
 "climate":"fourteen",
 "kWhrTYPICAL":"14,519",
@@ -240,7 +240,7 @@ var heed = [
 "ghgEquivalenceFOAT":"10.17",
 "costFOAT":"$1,419.86",
 "savings":"$35.24"
-}
+},
 {
 "climate":"fifteen",
 "kWhrTYPICAL":"12,871",
@@ -250,7 +250,7 @@ var heed = [
 "ghgEquivalenceFOAT":"8.93",
 "costFOAT":"$1,837.01",
 "savings":"$62.31"
-}
+},
 {
 "climate":"sixteen",
 "kWhrTYPICAL":"19,576",
@@ -326,19 +326,19 @@ document.getElementById("zone19").addEventListener("click", function() {
 });
 
 function myFunction(a) {
-  var kWhrTYP = heed(a).kWhrTYPICAL;
-  	document.getElementById("TYPICALenergy").innerHTML = kWrTYP;
-  var ghgEquivalenceTYP = heed(a).ghgEquivalenceTYPICAL;
+  var kWhrTYP = heed[a].kWhrTYPICAL;
+  	document.getElementById("TYPICALenergy").innerHTML = kWhrTYP;
+  var ghgEquivalenceTYP = heed[a].ghgEquivalenceTYPICAL;
   	document.getElementById("TYPICALghg").innerHTML = ghgEquivalenceTYP;
-  var costTYP = heed(a).costTYPICAL;
+  var costTYP = heed[a].costTYPICAL;
   	document.getElementById("TYPICALcost").innerHTML = costTYP;
-  var kWhrFO = heed(a).kWhrFOAT;
-  	document.getElementById("FOATenergy").innerHTML = kWrFO;
-  var ghgEquivalenceFO = heed(a).ghgEquivalenceFOAT;
-  	document.getElementById("FOATghg").innerHTML = ghgEquivalentFO;
-  var costFO = heed(a).costFOAT;
+  var kWhrFO = heed[a].kWhrFOAT;
+  	document.getElementById("FOATenergy").innerHTML = kWhrFO;
+  var ghgEquivalenceFO = heed[a].ghgEquivalenceFOAT;
+  	document.getElementById("FOATghg").innerHTML = ghgEquivalenceFO;
+  var costFO = heed[a].costFOAT;
   	document.getElementById("FOATcost").innerHTML = costFO;
-  var sav = heed(a).savings;
+  var sav = heed[a].savings;
   	document.getElementById("Save").innerHTML = sav;
 }
 </script>
