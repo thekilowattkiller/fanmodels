@@ -7,8 +7,14 @@ function setval(varval)
 	zonedata= varval;
 	alert(zonedata);
 }
-
-function climateZoneData(a){
+var kWhrTYPICAL = '';
+var ghgEquivalenceTYPICAL = '';
+var costTYPICAL = '';
+var kWhrFOAT = '';
+var ghgEquivalentFOAT = '';
+var savings = '';
+function climateZoneData(a)
+{
   kWhrTYPICAL = HEED[a].kWhrTYPICAL;
   document.write(kWhrTYPICAL);
   
@@ -202,6 +208,8 @@ var HEED = [
 ];
 
 </script>
+
+	
 <img id="zone" usemap="#image-map"  src="https://thekilowattkiller.github.io/fanmodels/CAClimateZoneMap.png">
 
     <map name="image-map">
@@ -233,8 +241,6 @@ var HEED = [
       </map>
 
     <script>
-
-</map>
 
         var coordsA = [];
         	coordsA[0] = "40,0,55,10,73,91,86,91,92,105,84,209,67,209,62,336,74,336,76,351,92,351,92,368,105,373,99,433,113,442,111,466,99,472,97,494,111,496,108,523,116,526,125,529,122,537,150,567,166,572,172,601,181,602,178,614,163,614,154,595,127,572,80,512,81,490,67,439,80,401,68,363,8,285,2,252,35,184,45,161,33,152,51,91,45,41,27,35";
