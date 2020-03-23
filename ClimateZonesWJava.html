@@ -100,7 +100,7 @@
 <p id="Save">Savings</p>
 
 <script>
-var HEED = [
+var heed = [
 {
 "climate":"one",
 "kWhrTYPICAL":"12,396",
@@ -312,21 +312,33 @@ document.getElementById("zone14").addEventListener("click", function() {
 document.getElementById("zone15").addEventListener("click", function() {
   myFunction(15);
 });
+document.getElementById("zone16").addEventListener("click", function() {
+  myFunction(13);
+});
+document.getElementById("zone17").addEventListener("click", function() {
+  myFunction(15);
+});
+document.getElementById("zone18").addEventListener("click", function() {
+  myFunction(15);
+});
+document.getElementById("zone19").addEventListener("click", function() {
+  myFunction(5);
+});
 
 function myFunction(a) {
-  var kWhrTYP = HEED(a).kWhrTYPICAL;
+  var kWhrTYP = heed(a).kWhrTYPICAL;
   	document.getElementById("TYPICALenergy").innerHTML = kWrTYP;
-  var ghgEquivalenceTYP = HEED(a).ghgEquivalenceTYPICAL;
+  var ghgEquivalenceTYP = heed(a).ghgEquivalenceTYPICAL;
   	document.getElementById("TYPICALghg").innerHTML = ghgEquivalenceTYP;
-  var costTYP = HEED(a).costTYPICAL;
+  var costTYP = heed(a).costTYPICAL;
   	document.getElementById("TYPICALcost").innerHTML = costTYP;
-  var kWhrFO = HEED(a).kWhrFOAT;
+  var kWhrFO = heed(a).kWhrFOAT;
   	document.getElementById("FOATenergy").innerHTML = kWrFO;
-  var ghgEquivalenceFO = HEED(a).ghgEquivalenceFOAT;
+  var ghgEquivalenceFO = heed(a).ghgEquivalenceFOAT;
   	document.getElementById("FOATghg").innerHTML = ghgEquivalentFO;
-  var costFO = HEED(a).costFOAT;
+  var costFO = heed(a).costFOAT;
   	document.getElementById("FOATcost").innerHTML = costFO;
-  var sav = HEED(a).savings;
+  var sav = heed(a).savings;
   	document.getElementById("Save").innerHTML = sav;
 }
 </script>
